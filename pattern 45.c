@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main()
+{
+    int n,rows,cols,spaces,colslimit;
+    printf("Enter a number");
+    scanf("%d",&n);
+    colslimit=2*n-1;
+    for(rows=1;rows<=n;rows++)
+    {
+        for(cols=1;cols<=colslimit;cols++)
+        {
+            if(cols>n-rows+1&&cols<n+rows-1)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+    for(rows=1;rows<n;rows++)
+    {
+        for(cols=1;cols<=colslimit;cols++)
+        {
+            if(cols>rows+1&&cols<colslimit-rows)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
